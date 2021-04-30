@@ -1,5 +1,8 @@
-﻿using PluginBase;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.CommandLine;
+using Microsoft.Extensions.DependencyInjection;
+using ICommand = PluginBase.ICommand;
 
 namespace HelloPlugin
 {
@@ -12,6 +15,16 @@ namespace HelloPlugin
         {
             Console.WriteLine("Hello !!!");
             return 0;
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Option> CreateConfigureOptions()
+        {
+            throw new NotImplementedException();
         }
     }
 }
